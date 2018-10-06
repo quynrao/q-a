@@ -5,29 +5,36 @@ function bagClick(){
 	image.style.display = "none";
 	checkHidden.style.display = "block";
 }
-
+ 
 function getVal(){
-	if(document.getElementById("input-question").value == ""){
+	if(document.getElementById("input-question").value.trim() == ""){
 		document.getElementById("input-question").style.border = "1px solid red";
 	}
 
 	else{
-		var newItem = document.createElement("LI");
-		var newButton = document.createElement("BUTTON");
-		var newQuestion = null;
-		if(document.getElementById("input-author").value == ""){
-			newQuestion = document.createTextNode("Anonymous: " + document.getElementById("input-question").value);
+		var replyButton = document.createElement("input");
+		replyButton.type = "button";
+		replyButton.id = "reply-button";
+		replyButton.value = "Reply";
+		if(document.getElementById("input-author").value.trim() == ""){
+			newQuestion = "Anonymous: " + document.getElementById("input-question").value;
 		}
 		else{
-			newQuestion = document.createTextNode(document.getElementById("input-author").value + ": " + document.getElementById("input-question").value);
+			newQuestion = document.getElementById("input-author").value + ": " + document.getElementById("input-question").value;
 		}
+		
+		var table = document.getElementsByTagName('table')[0];
 
-		newItem.appendChild(newQuestion);
+		var newRow = table.insertRow(0);
 
-		var listQuestion = document.getElementById("list-question");
-		listQuestion.insertBefore(newItem, listQuestion.childNodes[0]);
-		document.getElementById("form-input").style.display = "none";
-		document.getElementById("add-image").style.display = "block";
+		var cel1 = newRow.insertCell(0);
+        var cel2 = newRow.insertCell(1);
+
+        cel1.innerHTML = newQuestion;
+        cel2.appendChild(replyButton)
+		checkHidden.style.display = "none";
+		image.style.display = "block";
+		document.getElementById("input-question").style.border = "";
 	}
 	document.getElementById("input-question").value = "";
 	document.getElementById("input-author").value = "";

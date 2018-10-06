@@ -12,9 +12,6 @@ body{
 #body{
 	height: 90%;	
 }
-#add-question{
-
-}
 #add-image{
 	position: relative;
 	margin-left: 45%;
@@ -30,10 +27,11 @@ body{
 	margin-left: 40%;
 }
 #list-question{
-	/*box-shadow: 5px 5px 10px #0a4657;*/
 	background-color: #ededed;
-	width: 80%;
+	width: 70%;
 	margin: 0 auto;
+	word-break: break-all;
+	border: red;
 }
 #input-question{
 	width: 250px;
@@ -73,6 +71,22 @@ body{
 	border-radius: 2px solid #aaa;
 	box-shadow: 5px 5px 7px #0a4657;
 }
-#list-question{
-	list-style: none;
+#reply-button{
+	background-color: #aeedf2;
+	width: 80px;
+	height: 30px;
+	border: none;
+	border-radius: 5px;
+	margin: 8px 5px;
+	float: right;
+}
+#reply-button:hover{
+	border-radius: 2px solid #aaa;
+	box-shadow: 5px 5px 7px #0a4657;
+}
+#question-col{
+	width: 60%;
+}
+th, td {
+    border-bottom: 1px solid #aaa;
 }
