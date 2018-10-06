@@ -6,16 +6,21 @@ function bagClick(){
 	checkHidden.style.display = "block";
 }
  
+function replyClick(){
+	window.location.assign("ex.html");
+}
+
+
 function getVal(){
 	if(document.getElementById("input-question").value.trim() == ""){
 		document.getElementById("input-question").style.border = "1px solid red";
 	}
-
 	else{
 		var replyButton = document.createElement("input");
 		replyButton.type = "button";
 		replyButton.id = "reply-button";
 		replyButton.value = "Reply";
+		replyButton.onclick = this.replyClick;
 		if(document.getElementById("input-author").value.trim() == ""){
 			newQuestion = "Anonymous: " + document.getElementById("input-question").value;
 		}
@@ -31,7 +36,8 @@ function getVal(){
         var cel2 = newRow.insertCell(1);
 
         cel1.innerHTML = newQuestion;
-        cel2.appendChild(replyButton)
+        cel2.appendChild(replyButton);
+        
 		checkHidden.style.display = "none";
 		image.style.display = "block";
 		document.getElementById("input-question").style.border = "";
