@@ -1,0 +1,141 @@
+body{
+	font-family: Roboto,Helvetica,Arial,Microsoft YaHei,SimHei,sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #E8E8EA;
+}
+
+input[type="button"]:focus {
+	outline: none;
+}
+
+#header{
+	margin-top: -21px;
+	background-color: #aeedf2;
+	height: 100px;
+}
+#body{
+	height: 90%;
+
+}
+#add-image{
+	position: relative;
+	margin-left: 45%;
+	width: 75px;
+	height: 75px;
+}
+#add-image:hover{
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	cursor: pointer;
+}
+
+#form-input{
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+#title{
+	text-align: center
+}
+#list-question{
+	width: 60%;
+	background-color: #fff;
+	margin: 0 auto;
+	word-break: break-all;
+}
+#input-question{
+	width: 60%;
+	height: 60px;
+	border: 2px solid #aaa;
+	border-radius: 5px;
+	margin-left: 20%;
+}
+#input-author{
+	width: 60%;
+	height: 25px;
+	border: 2px solid #aaa;
+	border-radius: 5px;
+	margin-left: 20%;
+}
+#view_button{
+		justify-content: center;
+		align-items: center;
+}
+#done-button{
+	background-color: #aeedf2;
+	width: 80px;
+	height: 30px;
+	border: none;
+	border-radius: 5px;
+	margin: 8px 5px; 
+	margin-left: 75%;
+	margin-top: -2.8%;
+}
+#done-button:hover{
+	border-radius: 2px solid #aaa;
+	box-shadow: 5px 5px 7px #0a4657;
+}
+#cancel-button{
+	background-color: #aeedf2;
+	width: 80px;
+	height: 30px;
+	border: none;
+	border-radius: 5px;
+	margin: 8px 5px;
+	margin-left: 65%; 
+}
+#cancel-button:hover{
+	border-radius: 2px solid #aaa;
+	box-shadow: 5px 5px 7px #0a4657;
+}
+.reply-button{
+	background: none;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	float: left;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	width: 80px;
+}
+
+table {
+	border: none;
+}
+
+.question-block {
+	border: transparent;
+    border-bottom-color: #E8E8EA;
+}
+
+.author, .reply-button {
+	color: #898B95;
+}
+
+.vote-zone {
+	text-align: center;
+	width: 10%;
+}
+
+.vote-icon {
+	border: 1px solid #C3C3C9;
+	border-radius: 50%;
+	color: #C3C3C9;
+	cursor: pointer;
+	font-size: 2.5em;
+	margin-bottom: 8px;
+	padding: 1px 8px;
+	vertical-align: text-top;
+}
+
+.vote-icon-clicked {
+	border: 1px solid #aeedf2;
+	color: #aeedf2;
+}
+
+.vote-count {
+	font-weight: bold;
+	font-size: 1.2em;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Asking Question</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="header">
+    <h1 style="text-align: center;">QUESTION&ANSWER</h1>
+</div>
+<div id="body">
+    <!-- <img src="images\bag.png" id="add-image" onclick="bagClick()"> -->
+    <div id="form-input">
+        <h4 id="title">YOUR EVEN NAME</h4>
+        <textarea type="text" name="question" id="input-question" placeholder="Type your question here." onfocus="focusFunction()"></textarea><br>
+        <input type="text" name="author" id="input-author" style="display: none;" placeholder="Type your name."/><br>
+        <div id="view_button">
+            <button id="cancel-button" onclick="cancelAddQuestion()" style="display: none;">Cancel</button>
+            <button id="done-button" onclick="getVal()" style="display: none;">Done</button>
+        </div>
+    </div>
+
+    <table id="list-question" border="1px" cellspacing="0" cellpadding="5px">
+        <!--<tr id="0.06765404427769361" class="question-block">-->
+            <!--<td class="vote-zone">-->
+                <!--<i class="fas fa-caret-up vote-icon"></i><br>-->
+                <!--<span class="vote-count">2</span><br>-->
+                <!--<span>votes</span>-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<span class="author">dfasdf</span><br>-->
+                <!--<span class="question">ádfas</span><br>-->
+                <!--<br>-->
+                <!--<br>-->
+                <!--<input type="button" class="reply-button" value="Comments">-->
+            <!--</td>-->
+        <!--</tr>-->
+    </table>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js.js"></script>
+</body>
+</html>
